@@ -1,0 +1,55 @@
+{
+  "blocks": [
+    {
+      "anchor_keyword": "实验目的",
+      "paragraphs": [
+        "【测试注入文本】本段为 Mock 占位文本，用于验证正文字体、字号与行间距继承。",
+        "1. 掌握运算器 ALU 内部结构与控制信号逻辑。",
+        "2. 验证溢出判别机制与标志位生成规则。",
+        "3. hello 你好"
+      ]
+    },
+    {
+      "anchor_keyword": "实验内容",
+      "paragraphs": [
+        "【测试注入文本】设计硬件线路并编写测试微指令，验证基本算术逻辑运算功能。"
+      ]
+    },
+    {
+      "anchor_keyword": "实验步骤",
+      "paragraphs": [
+        "1. 设计硬件线路：连接数据总线与 ALU 输入端暂存器。",
+        "2. 编写微指令并单步调试。"
+      ],
+      "images": [
+        {
+          "title": "图3-1 实验硬件连接示意图（MOCK）",
+          "path": "assets/circuit.png",
+          "max_width_ratio": 0.8
+        }
+      ]
+    },
+    {
+      "anchor_keyword": "实验结果与分析",
+      "paragraphs": [
+        "【测试注入文本】根据单步执行结果，实测波形与理论状态一致，OF/ZF 标志位正确翻转。"
+      ],
+      "table": {
+        "title": "表4-1 运算器测试数据对照表（MOCK三线表）",
+        "table_type": "grid",
+        "headers": ["控制端", "输入A", "输入B", "输出F", "OF标志"],
+        "rows": [
+          ["ADD", "0x01", "0x02", "0x03", "0"],
+          ["SUB", "0x05", "0x01", "0x04", "0"]
+        ]
+      },
+      "images": [
+        {
+          "title": "图4-1 ALU 运算仿真输出波形图（MOCK）",
+          "path": "assets/waveform.png",
+          "max_width_ratio": 0.85
+        }
+      ]
+    }
+  ]
+}

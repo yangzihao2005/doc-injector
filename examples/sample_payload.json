@@ -1,0 +1,93 @@
+{
+  "blocks": [
+    {
+      "anchor_keyword": "实验目的",
+      "paragraphs": [
+        "本次实验围绕离散时间信号的频域分析展开，目标是掌握 DFT/FFT 的基本使用方法。",
+        "实验过程中需要记录采样参数、观察频谱泄漏现象，并对误差来源做出解释。"
+      ],
+      "custom_font": null,
+      "custom_size_pt": null,
+      "table": null,
+      "images": null
+    },
+    {
+      "anchor_keyword": "实验原理",
+      "paragraphs": [
+        "设采样频率为 fs，采样点数为 N，则频率分辨率为 fs/N。"
+      ],
+      "custom_font": null,
+      "custom_size_pt": null,
+      "table": {
+        "title": "表2-1 典型离散时间信号",
+        "table_type": "three_line",
+        "headers": [
+          "信号类型",
+          "表达式",
+          "主要特点"
+        ],
+        "rows": [
+          [
+            "单位阶跃",
+            "u(n)",
+            "单边、含直流分量"
+          ],
+          [
+            "指数序列",
+            "a^n u(n)",
+            "收敛性由 |a| 决定"
+          ],
+          [
+            "正弦序列",
+            "sin(ωn)",
+            "周期性与ω有关"
+          ]
+        ],
+        "alignment": "center"
+      },
+      "images": null
+    },
+    {
+      "anchor_keyword": "实验结果分析",
+      "paragraphs": [
+        "下图给出了 1 kHz 正弦信号经采样后的时域波形，采样点数为 1024，采样频率为 8 kHz。"
+      ],
+      "custom_font": null,
+      "custom_size_pt": null,
+      "table": {
+        "title": "表4-1 采样测试数据",
+        "table_type": "grid",
+        "headers": [
+          "序号",
+          "信号频率/Hz",
+          "采样值"
+        ],
+        "rows": [
+          [
+            1,
+            500,
+            0.707
+          ],
+          [
+            2,
+            1000,
+            0.991
+          ],
+          [
+            3,
+            2000,
+            0.123
+          ]
+        ],
+        "alignment": "center"
+      },
+      "images": [
+        {
+          "title": "图4-1 正弦信号时域波形",
+          "path": "D:\\doc-injector\\examples\\waveform.png",
+          "max_width_ratio": 0.8
+        }
+      ]
+    }
+  ]
+}

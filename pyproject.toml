@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "doc-injector"
+version = "0.1.0"
+description = "Surgical OpenXML injector for academic Word reports"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-docx>=1.1.2",
+    "docxtpl>=0.19.0",
+    "pillow>=10.4.0",
+    "pydantic>=2.8.0",
+    "click>=8.1.7",
+]
+
+[project.scripts]
+doc-injector = "src.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.6.0",
+    "mypy>=1.11.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src", "tests"]
+disallow_untyped_defs = true
+check_untyped_defs = true
+warn_unused_ignores = false
+ignore_missing_imports = true
+no_implicit_optional = true
